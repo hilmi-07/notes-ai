@@ -31,11 +31,11 @@ Proje; **Clean Architecture**, **feature-based mimari**, ve **modern state manag
 
 * go_router
 
-**AI & Backend (Planlanan)**
+**AI & Backend (Planlanan / Geliştirme Aşamasında)**
 
-* Gemini (Google AI)
-* Embedding & vektör tabanlı arama
-* Supabase (Auth, Database, Backend)
+* AI destekli anlamsal arama ve özetleme
+* Embedding ve vektör tabanlı bilgi erişimi
+* Backend servisleri (kimlik doğrulama, veritabanı, API’ler)
 
 ---
 
@@ -103,11 +103,11 @@ It follows professional software engineering practices centered around **Clean A
 
 * go_router
 
-**AI & Backend (Planned)**
+**AI & Backend (Planned / In Progress)**
 
-* Gemini (Google AI)
-* Embeddings & vector-based search
-* Supabase (Authentication, Database, Backend)
+* AI-powered semantic search and summarization
+* Embeddings and vector-based retrieval
+* Backend services (authentication, database, APIs)
 
 ---
 
