@@ -5,12 +5,12 @@ class InMemoryNotesRepository implements NotesRepository {
   final List<Note> _notes = [];
 
   @override
-  List<Note> getNotes() {
+  Future<List<Note>> getNotes() async {
     return List.unmodifiable(_notes);
   }
 
   @override
-  void addNote(Note note) {
+  Future<void> addNote(Note note) async {
     _notes.add(note);
   }
 }

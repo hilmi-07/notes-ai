@@ -6,7 +6,8 @@ class GetNotesUseCase {
 
   GetNotesUseCase(this.repository);
 
-  List<Note> call() {
+  Future<List<Note>> call() {
     return repository.getNotes();
   }
 }
+

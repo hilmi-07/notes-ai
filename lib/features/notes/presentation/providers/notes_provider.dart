@@ -15,17 +15,26 @@ class NotesProvider extends ChangeNotifier {
         _addNoteUseCase = addNoteUseCase;
 
   List<Note> _notes = [];
+  bool _isLoading = false;
 
   List<Note> get notes => _notes;
+  bool get isLoading => _isLoading;
 
-  void loadNotes() {
-    _notes = _getNotesUseCase();
+  Future<void> loadNotes() async {
+    _isLoading = true;
+    notifyListeners();
+
+    _notes = await _getNotesUseCase();
+
+    _isLoading = false;
     notifyListeners();
   }
 
-  void addNote(Note note) {
-    _addNoteUseCase(note);
-    loadNotes();
+  Future<void> addNote({
+    required String title,
+    required String content,
+  }) async {
+    await _addNoteUseCase(title, content);
+    await loadNotes();
   }
 }
-

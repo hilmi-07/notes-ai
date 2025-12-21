@@ -1,7 +1,7 @@
 import '../entities/note.dart';
 
 abstract class NotesRepository {
-  List<Note> getNotes();
+  Future<List<Note>> getNotes();
+  Future<void> addNote(Note note);
 
-  void addNote(Note note);
 }
