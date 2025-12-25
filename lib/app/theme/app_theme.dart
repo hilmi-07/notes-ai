@@ -31,5 +31,13 @@ class AppTheme {
 
     dividerColor: AppColors.divider,
   );
+  static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    colorScheme: ColorScheme.dark(
+      surface: Colors.grey.shade900,
+      primary: Colors.blue,
+    ),
+  );
+
 }
 
