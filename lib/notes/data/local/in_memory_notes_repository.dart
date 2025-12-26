@@ -18,4 +18,10 @@ class InMemoryNotesRepository implements NotesRepository {
   Future<void> deleteNote(String id) async {
     _notes.removeWhere((note) => note.id == id);
   }
+
+  @override
+  Future<void> toggleDone(String id) {
+    // TODO: implement toggleDone
+    throw UnimplementedError();
+  }
 }

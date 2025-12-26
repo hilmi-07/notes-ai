@@ -36,12 +36,17 @@ class NotesProvider extends ChangeNotifier {
       id: DateTime.now().millisecondsSinceEpoch.toString(),
       title: text.trim(),
       content: text.trim(),
-      createdAt: DateTime.now(),
+      createdAt: DateTime.now(), text: '', done: false,
     );
 
     // Ekleme
     await _repository.addNote(note);
     await loadNotes();
+  }
+
+  Future<void> toggleDone(String id) async {
+    await _repository.toggleDone(id);
+    loadNotes();
   }
 
   Future<void> deleteNote(String id) async {
